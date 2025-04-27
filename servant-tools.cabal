@@ -1,0 +1,67 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           servant-tools
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/jabaraster/servant-tools#readme>
+homepage:       https://github.com/jabaraster/servant-tools#readme
+bug-reports:    https://github.com/jabaraster/servant-tools/issues
+author:         jabaraster
+maintainer:     jabaraster
+copyright:      2025 jabaraster
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/jabaraster/servant-tools
+
+library
+  exposed-modules:
+      Jabara.Servant.Embedded
+  other-modules:
+      Paths_servant_tools
+  autogen-modules:
+      Paths_servant_tools
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , directory
+    , file-embed
+    , filepath
+    , http-media
+    , servant-server
+    , template-haskell
+  default-language: Haskell2010
+
+test-suite servant-tools-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_servant_tools
+  autogen-modules:
+      Paths_servant_tools
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , directory
+    , file-embed
+    , filepath
+    , http-media
+    , servant-server
+    , servant-tools
+    , template-haskell
+  default-language: Haskell2010
