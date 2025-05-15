@@ -14,7 +14,7 @@ module Jabara.Servant.Embedded (
   defHtmlHandler,
   defStaticFileHandler,
   HTML (..),
-  FileContent,
+  FileContent (..),
 ) where
 
 import Control.Monad.IO.Class
